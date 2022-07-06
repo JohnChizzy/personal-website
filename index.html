@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potfolio</title>
+    <link rel="stylesheet" type="text/css" href="src/style.css">
+    <link rel="stylesheet" type="text/css" href="src/main.css">
+  
+    
+    <!-- google font  -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Montserrat:wght@200;300&family=Philosopher&family=Sacramento&display=swap" rel="stylesheet">
+    
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <style>
+      .sidenav {
+        margin-left: auto!important;
+      }
+      
+      @media(prefers-color-scheme: dark){
+        .btn {
+                  color:rgb(226,229,226);
+                  background: rgb(0,55,55);
+              }
+          .btn:hover {
+          
+            background: rgb(0,80,80);
+                } 
+            .c-footer__link {
+                color:rgb(183,181,194)
+          }
+        .navbar-light .navbar-nav .nav-link {
+          color:rgb(95,221,220)
+        }
+
+      }   
+
+        @media screen and (max-width: 992px) {
+          .Top-cloud {
+            position: absolute;
+            right: 2%;
+            top:23%;
+            width: 100px;
+            height: auto;
+          }
+
+          .Bottom-cloud {
+            position: absolute;
+            left: 4%;
+            bottom: 7%;
+            width: 100px;
+            height: auto;
+          }
+
+          .Top-container {
+            background: linear-gradient(to bottom, rgb(150,255,255) 0%, rgb(190,255,255) 100%);
+            padding-top: 5%;
+          }
+          .middle-container {
+            background: linear-gradient(to bottom, rgb(190,255,255) 0%, rgb(220,255,255) 100%);
+          }
+          #Menu-bar {
+              display: inline;
+          }
+          .navib{
+            background: linear-gradient(to bottom, rgb(150,255,255) 0%, rgb(160,255,255) 100%);
+            display: block;
+            border-radius: 20px;
+          }
+          .middle-2 {
+          background: linear-gradient(to bottom, rgb(220,255,255) 0%, rgb(255,255,255) 100%);
+          }
+          .f-rule{
+          padding-top: 15px;
+          padding-bottom: 13px;
+          margin-top: 0;
+          margin-bottom: 0;
+      
+          }
+
+          #content {
+            position: absolute;
+            top:0px;
+          }
+        
+
+            .navbar {
+                position: relative;
+                display: -ms-flexbox;
+                display: block;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                -ms-flex-align: center;
+                align-items: center;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                padding: .5rem 1rem;
+                z-index: 3;
+                width:110px;
+            }
+                .sidenav {
+                
+                    left: 0px;
+                    display: inline-block;
+                    width: 100px;
+                }
+                    
+                
+                .sidenav > li {
+                    display: inline-block;
+                    width: 100px;
+                    }
+
+                .ctimer1{
+                      padding-left: 3%;
+                      display: none;
+                  }
+                  .time {
+                      color: #005;
+                      margin-bottom: 0;
+                  }
+                  
+                  .greeting {
+                      color: #555;
+                  }
+                  
+                  .ctimer2{
+                      position: absolute;
+                      top: 2%;
+                      right: 3%;
+                      padding-left: 3%;
+                      display: inline-block;
+                      width:130px;
+                    
+                  }
+
+                  .tcontainer{
+                      padding-top: 15%;
+                    }
+                    .rule{
+                            border-color:  #DCDCDC;
+                          }
+          
+
+              @media(prefers-color-scheme: dark){
+              .btn {
+                        color:rgb(226,229,226);
+                        background: rgb(0,55,55);
+                    }
+                .btn:hover {
+              
+                    background: rgb(0,80,80);
+                  } 
+            .c-footer__link {
+                        color:rgb(183,181,194)
+                    }
+                    .navbar-light .navbar-nav .nav-link {
+                      color:rgb(95,221,220)
+                    }
+            .navib {
+                  background: linear-gradient(to bottom, rgb(0,58,59) 0%, rgb(0,48,48) 100%);
+                  border-radius: 20px;
+
+                }
+
+            .Top-container {
+                background: linear-gradient(to bottom, rgb(0,57,58) 0%, rgb(0,48,48) 100%);
+
+            }
+
+            .middle-container {
+              background: linear-gradient(to bottom, rgb(0,48,48) 0%, rgb(5,41,41) 100%);
+
+            }
+            .middle-2 {
+              background: linear-gradient(to bottom, rgb(5,41,41) 0%, rgb(20,34,34) 100%);
+
+            }
+            .navbar-light .navbar-toggler {
+              color: rgb(95,220,221);
+            }
+            .ctimer1{
+            padding-left: 3%;
+            display: none;
+              }
+              .time {
+                  color: #66BFBF;
+                  margin-bottom: 0;
+              }
+              .rule{
+                      border-color:  #DCDCDC;
+                  }
+              
+              .greeting {
+                  color: #508F80;
+              }
+              
+              .ctimer2{
+                  padding-left: 3%;
+                  display: inline;
+                  display: inline-block;
+                  width:130px;
+              }
+              .tcontainer{
+                padding-top: 10%;
+              }
+          }
+
+        } 
+    </style>
+
+</head>
+<body>
+  <div id="Menu-bar">
+      <!--Nav bar-->
+    <nav class="navib navbar  navbar-expand-lg navbar-light" >
+
+      <span class="ctimer1" >
+        <h2 class="time"></h2>
+        <h6 class="greeting"></h6>
+      </span>
+      <!--a class="navbar-brand" href="#">Navbar</a!-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-bar" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse sidenav" id="nav-bar">
+        <div class="sidenav">        
+          <ul class="navbar-nav ml-auto sidenav">
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/JohnChizzy">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#work">Works</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-me">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Note</a>
+          </li>
+            <!--a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a!-->
+         </ul>
+        </div>
+  
+      </div>
+    </nav>
+  </div>
+  <div id="content">
+    <div class="Top-container"> 
+      
+      <span class="ctimer2" >
+        <h2 class="time time2"></h2>
+        <h6 class="greeting greeting2"></h6>
+      </span>
+      <div class= "tcontainer">
+        <img class="Top-cloud" alt="cloud-img">
+        <h1 class="name">I'm</h1>
+        <h1 class="name">John.</h1>
+        <h2 class="name">a programmer.</h2> 
+        <img class="Bottom-cloud"  alt="cloud-img"> 
+        <img class="mountain"  src="src/image/mountain.png" alt="mountain-img">  
+      </div>
+    </div>
+    <div class="middle-container">
+        <div class="profile">
+          <img class="my_pics" src="src/image/me.jpg" alt="my-picture" width="304"height="304">
+          <h2>Hello.</h2>
+          <p class="intro-1 touch" >I'm a programmer,experience as a web full stack developer and a python developer. I believe in a world of limitless possibilities!!! I do love to create it for you on web and mobile.</p>
+      
+          <p class="intro-1 touch" >I'm a professional Geologist and a Fullstack Developer.. </p>
+        </div>
+    </div>
+  <div class="middle-2">
+      <hr class="rule f-rule">
+        <div id="work" class="skills">
+          <h2>My Skills.</h2>
+          <div class="skill-row">
+            <img class="worker-row" src="src/image/worker.png" alt="worker-image">
+            <h3>Web Development</h3>
+            <p>I believe startups are future of any economy with great interest in creating exciting and meaningful contents and brand. passionate about child technology education. My focus is in getting the work done and conveying the message that you want sent .</p>
+          
+          </div>
+
+          <div class="skill-row">
+            <div>
+              <img class="Event-row devops" src="src/image/devops.png" alt="Event-img">
+            </div>     
+            <h3>Devops</h3>
+            <p>I believe in creating systems software and analyzing data to improve existing systems and optimization. Skilled at building, testing and maintaining the infrastructure and tools to allow for the speedy development and release of software.</p>
+          </div>
+          
+        </div>
+          <hr class="rule">
+        <div id="contact-me" >
+          <h2>Get In Touch</h2>
+          <p class="hire-me touch">I'm currently available for freelancing work and coaching as well as handling your projects.</p>
+          <p class="coach touch" >You have a project you want to get started? love to have fun as well as learn how to code in a smart way or you want to get insight from your data.</p>
+          <p class="c-footer__text">
+          <span class="u-d-block@md"><a class="btn" href="mailto:johnamakoh@gmail.com">MESSAGE ME</a> or <a href="#contact-me" class="c-footer__link js-mykelbot"><span>let's chat</span></a>.</span>
+          </p>
+        
+        </div>
+      
+      </div>
+
+      <div class="bottom-container">
+        <a class="footer-link" href="https://www.linkedin.com/in/john-amakoh-34231b131">LinkedIn</a>
+        <a class="footer-link" href="https://twitter.com/johnchizzy7">Twitter</a>
+        <a class="footer-link" href="https://web.facebook.com/john.amakoh">Facebook</a>
+        <p class="copy-right" >&copy; 2022 <spam class="my">John</spam> Chidozie Amakoh.</p>
+      </div>
+    </div>
+    
+</body>
+<footer>
+  <div id="c-mykelbot" class="c-mykelbot hide">
+    <div class="c-mykelbot_header o-flexy">
+      <div class="o-flexy__item">
+        <img class="c-mykelbot_avatar" src="src/image/me.jpg" alt="Pic of mykel">
+      </div>
+      <div class="o-flexy__block">
+        <span class="c-mykelbot_name">John's Bot</span>
+        <span class="c-mykelbot_desc">Ask me a question!</span>
+      </div>
+  
+      <div class="o-flexy__item u-mrg-l-auto">
+        <button class="c-mykelbot_close js-mykelbot-exit" data-button="close" aria-label="Close Modal">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.41425 6.00025L11.7072 1.70725C12.0982 1.31625 12.0982 0.68425 11.7072 0.29325C11.3162 -0.09775 10.6843 -0.09775 10.2933 0.29325L6.00025 4.58625L1.70725 0.29325C1.31625 -0.09775 0.68425 -0.09775 0.29325 0.29325C-0.09775 0.68425 -0.09775 1.31625 0.29325 1.70725L4.58625 6.00025L0.29325 10.2933C-0.09775 10.6843 -0.09775 11.3162 0.29325 11.7072C0.48825 11.9022 0.74425 12.0002 1.00025 12.0002C1.25625 12.0002 1.51225 11.9022 1.70725 11.7072L6.00025 7.41425L10.2933 11.7072C10.4883 11.9022 10.7442 12.0002 11.0002 12.0002C11.2562 12.0002 11.5122 11.9022 11.7072 11.7072C12.0982 11.3162 12.0982 10.6843 11.7072 10.2933L7.41425 6.00025Z" fill="white"></path>
+          </svg>
+  
+        </button>
+      </div>
+    </div>
+    <div id="c-mykelbot-content" class="c-mykelbot_content">
+      <div class="c-mykelbot_agent">
+        Hi! I’m John's Personal Assistant 🤖
+      </div>
+  
+      <div class="c-mykelbot_agent">
+        I’m just like John, but a far better conversationalist 😉
+      </div>
+  
+      <div class="c-mykelbot_agent">
+        How can I help you today?
+      </div>
+  
+      <div class="c-mykelbot_options active">
+        <button class="c-mykelbot_button" data-question="1">👋&nbsp;&nbsp;I just wanted to say hello</button>
+        <button class="c-mykelbot_button" data-question="2">💼&nbsp;&nbsp;I’d like to hire you!</button>
+        <button class="c-mykelbot_button" data-question="3">🤓&nbsp;&nbsp;Interested in mentorship</button>
+        <button class="c-mykelbot_button" data-question="4">🤔&nbsp;&nbsp;Looking for your old site</button>
+      </div>
+  
+      <div id="c-new-content"></div>
+  
+    </div>
+  
+    <div id="c-mykelbot-q">
+  
+      <div class="c-mykelbot_answer c-mykelbot_answer--1" data-answer="1">
+        <div tabindex="-1" class="c-mykelbot_user">
+          I just wanted to say hello
+        </div>
+        <div tabindex="-1" class="c-mykelbot_agent">
+          Well hello there!
+        </div>
+        <div tabindex="-1" class="c-mykelbot_agent">
+          Thanks for saying hi 😁
+        </div>
+        <div tabindex="-1" class="c-mykelbot_agent">
+          I hope you've enjoyed browsing my work
+        </div>
+        <div tabindex="-1" class="c-mykelbot_agent">
+          Can I help you with anything else?
+        </div>
+        <div class="c-mykelbot_options">
+          <button class="c-mykelbot_button" data-question="1">👋&nbsp;&nbsp;I just wanted to say hello</button>
+          <button class="c-mykelbot_button" data-question="2">💼&nbsp;&nbsp;I’d like to hire you!</button>
+          <button class="c-mykelbot_button" data-question="3">🤓&nbsp;&nbsp;Interested in mentorship</button>
+          <button class="c-mykelbot_button" data-question="4">🤔&nbsp;&nbsp;Looking for your old site</button>
+        </div>
+    </div>
+  
+    <div class="c-mykelbot_answer c-mykelbot_answer--2" data-answer="2">
+      <div tabindex="-1" class="c-mykelbot_user">
+        I’d like to hire you!
+      </div>
+      <div tabindex="-1" class="c-mykelbot_agent">
+        Ok, great!
+      </div>
+      <div tabindex="-1" class="c-mykelbot_agent">
+        Exciting times 🕺
+      </div>
+      <div tabindex="-1" class="c-mykelbot_agent">
+        Send me a message and let's chat further!
+      </div>
+      <div class="c-mykelbot_options">
+        <button class="c-mykelbot_button js-beacon" onclick="document.location='mailto:johnamakoh@gmail.com'">💌&nbsp;&nbsp;Send a message</button>
+        <button class="c-mykelbot_button" data-question="5">🤔&nbsp;&nbsp;Other options?</button>
+      </div>
+    </div>
+  
+    <div class="c-mykelbot_answer c-mykelbot_answer--3" data-answer="3">
+      <div tabindex="-1" class="c-mykelbot_user">
+        Interested in mentorship
+      </div>
+      <div tabindex="-1" class="c-mykelbot_agent">
+        Hi!
+      </div>
+      <div tabindex="-1" class="c-mykelbot_agent">
+        Thanks for reaching out
+      </div>
+      <div tabindex="-1" class="c-mykelbot_agent">
+        Unfortunately, I don't currently have any capacity to take on the role of mentor for any new students this year
+      </div>
+      <div tabindex="-1" class="c-mykelbot_agent">
+        Thanks for understanding
+      </div>
+      <div tabindex="-1" class="c-mykelbot_agent">
+        Can I help you with anything else?
+      </div>
+      <div class="c-mykelbot_options">
+        <button class="c-mykelbot_button" data-question="1">👋&nbsp;&nbsp;I just wanted to say hello</button>
+        <button class="c-mykelbot_button" data-question="2">💼&nbsp;&nbsp;I’d like to hire you!</button>
+        <button class="c-mykelbot_button" data-question="3">🤓&nbsp;&nbsp;Interested in mentorship</button>
+        <button class="c-mykelbot_button" data-question="4">🤔&nbsp;&nbsp;Looking for your old site</button>
+      </div>
+    </div>
+  
+    <div class="c-mykelbot_answer c-mykelbot_answer--4" data-answer="4">
+  
+      <div class="c-mykelbot_user">
+        I'm looking for your old site
+      </div>
+  
+      <div tabindex="-1" class="c-mykelbot_agent">
+        Unfortunately, the previous site is no longer available 😔
+      </div>
+      <div tabindex="-1" class="c-mykelbot_agent">
+        My work has changed since the site was created almost a decade ago
+      </div>
+      <div tabindex="-1" class="c-mykelbot_agent">
+        I've updated it to better reflect my life, current work, and ambitions
+      </div>
+      <div tabindex="-1" class="c-mykelbot_agent">
+        Thanks for understanding
+      </div>
+      <div tabindex="-1" class="c-mykelbot_agent">
+        Can I help you with anything else?
+      </div>
+  
+      <div class="c-mykelbot_options">
+        <button class="c-mykelbot_button" data-question="1">👋&nbsp;&nbsp;I just wanted to say hello</button>
+        <button class="c-mykelbot_button" data-question="2">💼&nbsp;&nbsp;I’d like to hire you!</button>
+        <button class="c-mykelbot_button" data-question="3">🤓&nbsp;&nbsp;Interested in mentorship</button>
+        <button class="c-mykelbot_button" data-question="4">🤔&nbsp;&nbsp;Looking for your old site</button>
+      </div>
+  
+    </div>
+  
+  
+    <div class="c-mykelbot_answer c-mykelbot_answer--5" data-answer="5">
+  
+      <div class="c-mykelbot_user">
+        Other options?
+      </div>
+  
+      <div tabindex="-1" class="c-mykelbot_agent">
+        Try the following!
+      </div>
+      <div class="c-mykelbot_options">
+        <button class="c-mykelbot_button" data-question="1">👋&nbsp;&nbsp;I just wanted to say hello</button>
+        <button class="c-mykelbot_button" data-question="2">💼&nbsp;&nbsp;I’d like to hire you!</button>
+        <button class="c-mykelbot_button" data-question="3">🤓&nbsp;&nbsp;Interested in mentorship</button>
+        <button class="c-mykelbot_button" data-question="4">🤔&nbsp;&nbsp;Looking for your old site</button>
+      </div>
+  
+    </div>
+  
+  </div>
+  
+  
+  </div>
+  
+  <button class="c-fab js-mykelbot" aria-label="Toggle Chat">
+    <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M27.1245 15H24.875C18.869 15 14 19.6557 14 25.3986C14 31.1419 18.869 36.0251 24.875 36.0251H27.1245C28.5007 36.0251 29.8164 35.5501 31.0277 35.1042L34.7099 36.9196C35.5358 37.229 36.4153 36.6034 36.3434 35.7578L36.1004 31.4793C37.7493 29.6565 38 27.9982 38 25.3986C38 19.6557 33.131 15 27.1245 15ZM34.1036 31.5927C34.0733 31.0585 34.2583 30.5344 34.6172 30.1376C35.7262 28.9116 36 27.9263 36 25.3986C36 20.7808 32.0459 17 27.1245 17H24.875C19.954 17 16 20.7808 16 25.3986C16 30.0739 20.0109 34.0251 24.875 34.0251H27.1245C27.9586 34.0251 28.7311 33.8185 30.3367 33.2274C30.851 33.038 31.4205 33.068 31.9121 33.3104L34.2672 34.4715L34.1036 31.5927ZM34.3467 35.8712L34.3439 35.8218C34.3443 35.8381 34.3452 35.8546 34.3467 35.8712Z" fill="white"></path>
+  </svg>
+  
+  </button>
+  
+  
+  
+  <script src="src/jquery.min.js"></script>
+  
+  
+  
+  <script src="src/scripts.js"></script>
+  
+  
+</footer>
+
+
+</html>
