@@ -10,11 +10,11 @@ const Intro =() => {
 
     useEffect(() =>{
         if (hours >=6 && hours <= 19){
-            setTopImage("/image/Daylight.png");
-            setBottomImage("/image/Daylight.png");
+            setTopImage("./image/Daylight.png");
+            setBottomImage("./image/Daylight.png");
         } else{
-            setTopImage("/image/Night2.png");
-            setBottomImage("/image/Night.png");
+            setTopImage("./image/Night2.png");
+            setBottomImage("./image/Night.png");
         }
     });
 
@@ -32,12 +32,12 @@ const Intro =() => {
                     <h1 className="name">John.</h1>
                     <h2 className="name">a programmer.</h2> 
                     <img class="Bottom-cloud" src={bottomImage}  alt="cloud-img"/> 
-                    <img className="mountain"  src= "/image/mountain.png" alt="mountain-img"/>  
+                    <img className="mountain"  src= "./image/mountain.png" alt="mountain-img"/>  
                 </div>
             </div>
             <div className="middle-container">
                 <div className="profile">
-                <img className="my_pics" src="/image/me.jpg" alt="my-picture" width="304"height="304"/>
+                <img className="my_pics" src="./image/me.jpg" alt="my-picture" width="304"height="304"/>
                 <h2>Hello.</h2>
                 <p className="intro-1 touch" >I'm a programmer,experience as a web full stack developer and a python developer. I believe in a world of limitless possibilities!!! I do love to create it for you on web and mobile.</p>
                 <p className="intro-1 touch" >I'm a professional Geologist and a Fullstack Developer.. </p>
