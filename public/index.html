@@ -2,33 +2,225 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!-- bootstrap  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google font  -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Montserrat:wght@200;300&family=Philosopher&family=Sacramento&display=swap" rel="stylesheet">
+    
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+      .sidenav {
+        margin-left: auto!important;
+      }
+      
+      @media(prefers-color-scheme: dark){
+        .btn {
+                  color:rgb(226,229,226);
+                  background: rgb(0,55,55);
+              }
+          .btn:hover {
+          
+            background: rgb(0,80,80);
+                } 
+            .c-footer__link {
+                color:rgb(183,181,194)
+          }
+        .navbar-light .navbar-nav .nav-link {
+          color:rgb(95,221,220)
+        }
+
+      }   
+
+        @media screen and (max-width: 992px) {
+          .Top-cloud {
+            position: absolute;
+            right: 2%;
+            top:23%;
+            width: 100px;
+            height: auto;
+          }
+
+          .Bottom-cloud {
+            position: absolute;
+            left: 4%;
+            bottom: 7%;
+            width: 100px;
+            height: auto;
+          }
+
+          .Top-container {
+            background: linear-gradient(to bottom, rgb(150,255,255) 0%, rgb(190,255,255) 100%);
+            padding-top: 5%;
+          }
+          .middle-container {
+            background: linear-gradient(to bottom, rgb(190,255,255) 0%, rgb(220,255,255) 100%);
+          }
+          #Menu-bar {
+              display: inline;
+          }
+          .navib{
+            background: linear-gradient(to bottom, rgb(150,255,255) 0%, rgb(160,255,255) 100%);
+            display: block;
+            border-radius: 20px;
+          }
+          .middle-2 {
+          background: linear-gradient(to bottom, rgb(220,255,255) 0%, rgb(255,255,255) 100%);
+          }
+          .f-rule{
+          padding-top: 15px;
+          padding-bottom: 13px;
+          margin-top: 0;
+          margin-bottom: 0;
+      
+          }
+
+          #content {
+            position: absolute;
+            top:0px;
+          }
+        
+
+            .navbar {
+                position: relative;
+                display: -ms-flexbox;
+                display: block;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                -ms-flex-align: center;
+                align-items: center;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                padding: .5rem 1rem;
+                z-index: 3;
+                width:110px;
+            }
+                .sidenav {
+                
+                    left: 0px;
+                    display: inline-block;
+                    width: 100px;
+                }
+                    
+                
+                .sidenav > li {
+                    display: inline-block;
+                    width: 100px;
+                    }
+
+                .ctimer1{
+                      padding-left: 3%;
+                      display: none;
+                  }
+                  .time {
+                      color: #005;
+                      margin-bottom: 0;
+                  }
+                  
+                  .greeting {
+                      color: #555;
+                  }
+                  
+                  .ctimer2{
+                      position: absolute;
+                      top: 2%;
+                      right: 3%;
+                      padding-left: 3%;
+                      display: inline-block;
+                      width:130px;
+                    
+                  }
+
+                  .tcontainer{
+                      padding-top: 15%;
+                    }
+                    .rule{
+                            border-color:  #DCDCDC;
+                          }
+          
+
+              @media(prefers-color-scheme: dark){
+              .btn {
+                        color:rgb(226,229,226);
+                        background: rgb(0,55,55);
+                    }
+                .btn:hover {
+              
+                    background: rgb(0,80,80);
+                  } 
+            .c-footer__link {
+                        color:rgb(183,181,194)
+                    }
+                    .navbar-light .navbar-nav .nav-link {
+                      color:rgb(95,221,220)
+                    }
+            .navib {
+                  background: linear-gradient(to bottom, rgb(0,58,59) 0%, rgb(0,48,48) 100%);
+                  border-radius: 20px;
+
+                }
+
+            .Top-container {
+                background: linear-gradient(to bottom, rgb(0,57,58) 0%, rgb(0,48,48) 100%);
+
+            }
+
+            .middle-container {
+              background: linear-gradient(to bottom, rgb(0,48,48) 0%, rgb(5,41,41) 100%);
+
+            }
+            .middle-2 {
+              background: linear-gradient(to bottom, rgb(5,41,41) 0%, rgb(20,34,34) 100%);
+
+            }
+            .navbar-light .navbar-toggler {
+              color: rgb(95,220,221);
+            }
+            .ctimer1{
+            padding-left: 3%;
+            display: none;
+              }
+              .time {
+                  color: #66BFBF;
+                  margin-bottom: 0;
+              }
+              .rule{
+                      border-color:  #DCDCDC;
+                  }
+              
+              .greeting {
+                  color: #508F80;
+              }
+              
+              .ctimer2{
+                  padding-left: 3%;
+                  display: inline;
+                  display: inline-block;
+                  width:130px;
+              }
+              .tcontainer{
+                padding-top: 10%;
+              }
+          }
+
+        } 
+    </style>
+    <title>Johnchizzy</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script src="./src/index.js" type="text/jsx"></script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -39,5 +231,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="scripts.js"></script>
   </body>
 </html>
