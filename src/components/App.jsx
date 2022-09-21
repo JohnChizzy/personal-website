@@ -3,6 +3,7 @@ import Header from "./Header";
 import  Intro from "./Intro";
 import  Skills from "./Skills";
 import Footer from "./Footer";
+import Socials from "./Socials";
 
 const { PUBLIC_URL } = process.env;
 
@@ -13,7 +14,7 @@ function App (){
             <div id="content">
                 <Intro/>
                 <Skills/>
-                
+                <Socials/>
             </div>
             <Footer/>
         </div>

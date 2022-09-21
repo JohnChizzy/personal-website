@@ -29,7 +29,7 @@ function Header(){
                   <a className="nav-link" href="#contact-me">Contact</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="">Note</a>
+                  <a className="nav-link" href="#">Note</a>
                 </li>
               </ul>
               </div>
